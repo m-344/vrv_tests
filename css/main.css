@@ -1,0 +1,19 @@
+header {
+    color: green;
+    font-size: 1.8rem;
+   
+}
+
+div.container {
+    width: 600px;
+}
+
+
+#rendering {
+    height: 800px;
+    width: 1500px;
+    border: 1px solid #666666;
+    margin-bottom: 1.5rem;
+    overflow: scroll;
+}
+
