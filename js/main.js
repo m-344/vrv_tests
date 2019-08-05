@@ -17,8 +17,16 @@ $.ajax({
 });
 
 $("#changeSize").on("click", function () {
+
+var id = 'm1_k421_001';
 	$("#rendering").css("width", "2500px");
+		document.getElementById(id).classList.toggle('chosen');
 	/*$("header").css("color", "blue");*/
+})
+
+$("#chooseMeasure").on("click", function () {
+	$("#rendering").css("width", "50px");
+	/*document.getElementById('#m1_k421_001').classList.toggle('chosen');*/
 })
 
 

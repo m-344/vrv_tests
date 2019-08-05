@@ -6,5 +6,6 @@
     </meta>
     <projectTree name="v_tests.xpr">
         <folder path="."/>
+        <folder path="file:/L:/Programmieren/cmd/"/>
     </projectTree>
 </project>
