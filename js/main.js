@@ -16,16 +16,13 @@ $.ajax({
 	}
 });
 
-$("#changeSize").on("click", function () {
-
-var id = 'm1_k421_001';
-	$("#rendering").css("width", "2500px");
-		document.getElementById(id).classList.toggle('chosen');
-	/*$("header").css("color", "blue");*/
-})
-
 $("#chooseMeasure").on("click", function () {
-	$("#rendering").css("width", "50px");
+	
+	var rect = document.createElement("rect");
+	var parentDiv = document.getElementById("m1_k421_001").parentNode;
+	var sp2 = document.getElementById("m1_k421_001");
+	parentDiv.insertBefore(rect, sp2);
+	
 	/*document.getElementById('#m1_k421_001').classList.toggle('chosen');*/
 })
 
