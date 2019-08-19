@@ -18,12 +18,22 @@ $.ajax({
 
 $("#chooseMeasure").on("click", function () {
 	
+	/*	create rectangle*/
 	var rect = document.createElement("rect");
-	var parentDiv = document.getElementById("m1_k421_001").parentNode;
-	var sp2 = document.getElementById("m1_k421_001");
-	parentDiv.insertBefore(rect, sp2);
+	/*	find coordinates of the searched measure*/
+	var measure = document.getElementById("m1_k421_001");
+	var measureCoord = measure.getBBox();
 	
-	/*document.getElementById('#m1_k421_001').classList.toggle('chosen');*/
+	/*	set the attributes to the rectangle*/
+	rect.setAttribute('x', measureCoord.x);
+	rect.setAttribute('y', measureCoord.y);
+	rect.setAttribute('width', measureCoord.width);
+	rect.setAttribute('height', measureCoord.height);
+	rect.setAttribute('fill', 'rgba(207, 187, 250, 0.4)');
+	
+	/*	append the rectangle before the searched measure*/
+	var parentDiv = document.getElementById("m1_k421_001").parentNode;
+	parentDiv.insertBefore(rect, measure);
 })
 
 
