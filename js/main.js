@@ -19,7 +19,7 @@ $.ajax({
 $("#chooseMeasure").on("click", function () {
 	
 	/*	create rectangle*/
-	var rect = document.createElement("rect");
+	var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
 	/*	find coordinates of the searched measure*/
 	var measure = document.getElementById("m1_k421_001");
 	var measureCoord = measure.getBBox();
@@ -29,9 +29,9 @@ $("#chooseMeasure").on("click", function () {
 	rect.setAttribute('y', measureCoord.y);
 	rect.setAttribute('width', measureCoord.width);
 	rect.setAttribute('height', measureCoord.height);
-	rect.setAttribute('fill', 'rgba(207, 187, 250, 0.4)');
+	rect.setAttribute('fill', 'rgba(179, 236, 255, 0.4)');
 	
-	/*	append the rectangle before the searched measure*/
+	/*	append the rectangle before the searched measure*/;
 	var parentDiv = document.getElementById("m1_k421_001").parentNode;
 	parentDiv.insertBefore(rect, measure);
 })
